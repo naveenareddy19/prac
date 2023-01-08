@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+       
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZemosoRestaurant</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/c605623355.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="./main.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="food-page">
+        <div class="split left">
+            <h2 >Tables</h2>
+            <div class="table-input">
+            <input class="tableSearch" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search table.." title="Type in a name">
+            </div>
+            <div id="tables">
+                <div class="tables">
+                    <div class="target1 tableNo" data-toggle="modal" data-target="#myModal" onclick="return fun(1)" id="target1" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,1)" ondragover="return dragOver(event)">Table-1<br>
+                       <span id="table-1"></span>
+                    </div>
+                    <div class="tableNo" data-toggle="modal" data-target="#myModal" onclick="return fun(2)" id="target2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,2)" ondragover="return dragOver(event)">Table-2<br>
+                        <span id="table-2"></span>
+                    </div>
+                    <div class="tableNo" data-toggle="modal" data-target="#myModal" onclick="return fun(3)" id="target3" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,3)" ondragover="return dragOver(event)">Table-3<br>
+                        <span id="table-3"></span>
+                    </div>
+                    <div class="tableNo" data-toggle="modal" data-target="#myModal" onclick="return fun(4)" id="target4" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,4)" ondragover="return dragOver(event)">Table-4<br>
+                        <span id="table-4"></span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="split right menu-section"> 
+            <h1>Menu</h1>
+            <div class="menu-input">
+                <input class="menuSearch" type="text" id="searchMenu" onkeyup="myFunc()" placeholder="Search items.." title="Type in a name">
+            </div>
+            <div class=" menu-items">
+
+                <div class="item-type">
+                    <a class="sub-btn">Main Course<i class="fa-solid fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu"><ul id="myMenu1"></ul></div>
+                </div>
+                <div class="item-type">
+                    <a class="sub-btn">Desserts<i class="fa-solid fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu"><ul id="myMenu2" ></ul></div>
+                </div>
+                <div class="item-type">
+                    <a class="sub-btn">Apptizers<i class="fa-solid fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu"><ul id="myMenu3"></ul></div>
+                </div>
+                <div class="item-type">
+                    <a class="sub-btn">Beverages<i class="fa-solid fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu"><ul id="myMenu4"></ul></div>
+                </div>
+            </div>    
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                    <div class="modal-header" id="clos" style="background-color:cadetblue"></div>
+                    <div class="modal-body" id="modal-body"></div>
+                    <div class="modal-footer">
+                     <button type="button" class="btn btn-default" onclick="generateBill()" data-dismiss="modal">CLOSE SESSION(GENERATE BILL)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script  type="text/javascript">
+            $(document).ready(function(){
+                $('.sub-btn').click(function(){
+                    $(this).next('.sub-menu').slideToggle();
+                    $(this).find('.dropdown').toggleClass('rotate');
+                });
+            });
+        </script>
+        <script type="text/javascript" src="./main.js"></script>
+    </body>
+</html>

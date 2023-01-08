@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.food-page{
+  min-height: 100vh;
+  background-color: rgb(41, 40, 40);
+}
+.left {
+  width:350px;
+  height:100vh;
+ position:fixed;
+  top:0;
+  left:0;
+  overflow-y: auto;
+  text-align: center;
+  color: rgb(213, 210, 210);
+  border-right:5px  solid rgb(224, 220, 220);
+}
+.left h2{
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 38px;
+    color: cadetblue;
+}
+.left input{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 14px;
+    position: relative;
+    height:0.9cm;
+    color: black;
+}
+.left .tables  .tableNo{
+    width:80%;
+    line-height: 30px;
+    font-weight: 200;
+    border: 2px solid white;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 19px;
+    box-shadow: 2px 2px 3px wheat;
+    cursor:pointer;
+}
+.left .tables .tableNo:hover{
+    background-color: white;
+    color: black;
+}
+.right {
+  margin-left: 350px;
+  text-align: center;
+}
+.menu-section h1{
+  padding:20px;
+  color: cadetblue;
+  border-bottom: 5px solid white;
+  line-height: 20px;
+  font-size: 45px;
+  font-weight: bold;
+}
+.menu-section input{
+  margin-top: 30px;
+  margin-left: 40px;
+  width:80%;
+  height:1cm;
+}
+.menu-section .menu-items{
+  width: 100%;
+  margin-top: 80px;
+}
+.menu-section .menu-items .item-type{
+ position: relative;
+ cursor:pointer;
+}
+.menu-section  .menu-items .item-type a{
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 23px;
+  padding :10px 40px;
+  line-height: 80px;
+  display: block;
+  text-align: left;
+}
+.menu-section  .menu-items .item-type a:hover{
+  background-color:cadetblue ;
+  opacity: 0.6;
+  color: black;
+  font-weight: 900;
+}
+.menu-section  .menu-items .item-type a .dropdown{
+  position:absolute;
+  right:0;
+  margin-right:120px;
+  transition: 0.3s ease;
+  margin-top: 31px;
+}
+.menu-section  .menu-items .item-type .sub-menu{
+  background-color: rgba(229, 219, 219, 0.1);
+  display: none ;
+  cursor: grab;
+}
+.menu-section  .menu-items .item-type .sub-menu li{
+  color: aliceblue;
+  font-size: 18px;
+  text-align: left;
+  list-style-type:circle;
+  margin-left: 30px;
+}
+.menu-section  .menu-items .item-type .sub-menu a p{
+  font-size: 17px;
+  line-height: 20px;
+}
+.rotate{
+  transform: rotate(90deg);
+}
+.price{
+  font-size: 13px;
+}
+ @media (screen :max-width850px) {
+  
+  .left{
+    position: relative;
+  }
+}
+.modal-content{
+  width:90%;
+  height: auto;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal-footer .btn{
+  border: 1.5px solid black;
+  font-weight: 500;
+}
